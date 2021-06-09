@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Skip to content
 Search or jump to…
 
@@ -29,6 +30,8 @@ Latest commit cbebad9 31 minutes ago
  1 contributor
 129 lines (105 sloc)  1.76 KB
   
+=======
+>>>>>>> ab4406f749edd21867ead0e00ac74326b8c33ae1
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -158,6 +161,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
 © 2021 GitHub, Inc.
 Terms
 Privacy
@@ -171,3 +175,5 @@ Training
 Blog
 About
 Loading complete
+=======
+>>>>>>> ab4406f749edd21867ead0e00ac74326b8c33ae1
