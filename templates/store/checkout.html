@@ -1,0 +1,42 @@
+{%extends 'main.html'%}
+{% load static %}
+
+{% block content%}
+
+<h3>CheckOut page</h3>
+
+<p><a href="{% url 'cart' %}"> back to cart</a></p>
+
+
+<h3>Cart Summary</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><strong></strong></th>
+      <th scope="col"><strong>Name</strong></th>
+      <th scope="col"><strong>Price</strong></th>
+      <th scope="col"><strong>Quantity</strong></th>
+      <th scope="col"><strong>total</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<p>No of cart items: {{cartItems}}</p>
+{% for i in items%}
+    <tr>
+      <th scope="row">
+      	{%if i.product.image %}<img style="height: 10px;width: 10px;" src="{{i.product.image.url}}">
+      {%endif %}</th>
+      <td>{{i.product.name}}</td>
+      <td>{{i.product.price|floatformat:2}}</td>
+      <td>{{i.quantity}}</td>
+      <td>{{i.get_total|floatformat:2}}</td>
+    </tr>
+{% endfor %}
+
+    
+  </tbody>
+</table>
+<h5>Items: <strong>{{order.get_cart_items}}</strong></h5>
+<h5>Total: <strong>Rs. {{order.get_cart_total|floatformat:2}}</strong></h5>
+{% endblock %}
